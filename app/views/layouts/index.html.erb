@@ -1,0 +1,9 @@
+<%= form_with(model: UploadedImage.new, local: true, url: uploaded_images_path, multipart: true) do |form| %>
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Upload Image" %>
+  </div>
+<% end %>
